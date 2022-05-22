@@ -20,12 +20,12 @@ interface TaskCard {
 }
 
 const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
-  <div className='py-12' id='task'>
+  <div className='bg-[#F9F9F9] py-12' id='task'>
     <p className='text-center text-sm font-bold'>{subtitle}</p>
     <h2 className='text-center text-[20px] font-bold'>{title}</h2>
     {card.map((c, index) => (
       <div key={index} className=' text-center'>
-        <h3 className='my-8 text-lg font-bold'>{c.title}</h3>
+        <h3 className='my-8 text-[20px] font-bold'>{c.title}</h3>
         <div>
           <Image
             src={c.image.src}
@@ -62,7 +62,7 @@ export const Task = () => {
         list: ['・何が欲しいのかわからない', '・使ってもらえるか不安', '・サイズがわからない'],
       },
       {
-        title: '贈り手',
+        title: 'もらい手',
         image: {
           src: TaskReceiverImage,
           alt: 'sender',
