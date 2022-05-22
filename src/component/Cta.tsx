@@ -14,9 +14,11 @@ export const Cta: React.FC = () => (
         target='_blank'
         passHref
       >
-        <button className='mt-12 rounded-md bg-gray-100 px-6 py-3 font-bold tracking-widest text-primary-800 hover:opacity-70'>
-          資料請求
-        </button>
+        <a>
+          <button className='mt-12 rounded-md bg-gray-100 px-6 py-3 font-bold tracking-widest text-primary-800 hover:opacity-70'>
+            資料請求
+          </button>
+        </a>
       </Link>
     </div>
   </div>
