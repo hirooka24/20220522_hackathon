@@ -20,10 +20,10 @@ interface SolutionCard {
 
 const SolutionContainer: React.FC<SolutionProps> = ({ title, card }) => (
   <div className='py-12' id='solution'>
-    <h2 className='text-center text-base font-bold'>{title}</h2>
+    <h2 className='text-center text-[20px] font-bold'>{title}</h2>
     {card.map((c, index) => (
       <div key={index} className=' text-center'>
-        <h3 className='my-8 text-lg font-bold'>{c.title}</h3>
+        <h3 className='my-8 text-[20px] font-bold'>{c.title}</h3>
         <div>
           <Image
             src={c.image.src}

@@ -7,11 +7,15 @@ import { Solution } from '@/component/Solution';
 import { Task } from '@/component/Task';
 
 const Home: React.FC = () => (
-  <main className='mx-auto max-w-6xl py-6'>
-    <h1 className='text-lg font-bold text-primary-800'>
-      Welcome to Kikagaku Next.js Starter Kit!!
-    </h1>
-  </main>
+  <>
+    <PageHeader />
+    <Hero />
+    <Task />
+    <Solution />
+    <HowToUse />
+    <Cta />
+    <PageFooter />
+  </>
 );
 
 export default Home;
