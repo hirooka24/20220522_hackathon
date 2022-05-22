@@ -42,7 +42,7 @@ const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
           <div>
             <ul className='mx-auto grid w-96 justify-center text-left'>
               {c.list.map((l, index) => (
-                <li key={index} className='my-4 font-bold tracking-wider'>
+                <li key={index} className='my-1 font-bold tracking-wider'>
                   {l}
                 </li>
               ))}
@@ -84,7 +84,7 @@ export const Task = () => {
         list: [
           '「 既に持っている... 」',
           '「 同じ贈り物をもらう... 」',
-          '「 趣味ではないため活用しない... 」',
+          '「 使用する機会がない... 」',
         ],
       },
     ],
