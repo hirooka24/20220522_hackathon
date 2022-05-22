@@ -1,5 +1,3 @@
-import { Link } from 'react-scroll';
-
 export const PageHeader: React.FC = () => {
   const muneList: string[] = ['Task', 'Solution', 'How to use'];
   const idList: string[] = ['#task', '#solution', '#howtouse'];

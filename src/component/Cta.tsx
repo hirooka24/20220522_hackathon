@@ -1,6 +1,6 @@
 export const Cta: React.FC = () => (
   <div className=' bg-primary-800'>
-    <div className='py-12 px-8 text-right'>
+    <div className='py-12 px-8 text-right sm:mx-auto sm:w-9/12'>
       <h2 className='text-left text-lg font-bold text-white'>
         世の中の<span className='text-xl'>もったいない</span>
         <br />

@@ -1,6 +1,6 @@
 export const PageFooter: React.FC = () => (
-  <>
-    <div className='bg-gray-50 py-5 px-5 text-black'>
+  <div className='bg-gray-50 py-6'>
+    <div className=' py-5 px-5 text-black sm:flex sm:justify-around'>
       <div className='pb-2'>
         <p className='text-lg'>About</p>
         <div className='flex'>
@@ -33,7 +33,7 @@ export const PageFooter: React.FC = () => (
           <p className='ml-4 hover:cursor-pointer hover:opacity-70'>運営会社</p>
         </div>
       </div>
-      <p className='pt-8 text-center font-light'>@Shuichi Hirooka</p>
     </div>
-  </>
+    <p className='pt-8 text-center font-light'>@Shuichi Hirooka</p>
+  </div>
 );
