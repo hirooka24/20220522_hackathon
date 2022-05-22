@@ -34,9 +34,9 @@ const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
             height={c.image.height}
           />
         </div>
-        <ul className='content-center'>
+        <ul>
           {c.list.map((l, index) => (
-            <li key={index} className='my-4 text-left font-bold tracking-wider'>
+            <li key={index} className='my-4 text-center font-bold tracking-wider'>
               {l}
             </li>
           ))}
@@ -69,7 +69,7 @@ export const Task = () => {
           width: 168,
           height: 212,
         },
-        list: ['・既に持っている', '・趣味ではないため活用しない', '・同じ贈り物をもらう'],
+        list: ['・既に持っている', '・同じ贈り物をもらう', '・趣味ではないため活用しない'],
       },
     ],
   };
