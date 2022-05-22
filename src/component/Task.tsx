@@ -25,7 +25,9 @@ const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
     <h2 className='text-center text-[20px] font-bold'>{title}</h2>
     {card.map((c, index) => (
       <div key={index} className=' text-center'>
-        <h3 className='my-8 text-[20px] font-bold'>{c.title}</h3>
+        <h3 className='my-8 inline-block rounded-3xl bg-yellow-800 py-1 px-5 text-[20px] font-bold'>
+          {c.title}
+        </h3>
         <div>
           <Image
             src={c.image.src}
@@ -52,7 +54,7 @@ export const Task = () => {
     title: 'ー 贈り物のミスマッチをなくす ー',
     card: [
       {
-        title: '贈り手',
+        title: '贈るひと',
         image: {
           src: TaskSenderImage,
           alt: 'receiver',
@@ -62,7 +64,7 @@ export const Task = () => {
         list: ['・何が欲しいのかわからない', '・使ってもらえるか不安', '・サイズがわからない'],
       },
       {
-        title: 'もらい手',
+        title: 'もらうひと',
         image: {
           src: TaskReceiverImage,
           alt: 'sender',
