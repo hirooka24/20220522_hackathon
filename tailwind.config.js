@@ -42,7 +42,12 @@ module.exports = {
       xl: '1.875rem',
       '2xl': '2.25rem',
     },
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        hero: "url('/img/hero.png')",
+        'hero-tablet': "url('/img/bg-hero-tablet.png')",
+      }),
+    },
   },
   plugins: [],
 };
