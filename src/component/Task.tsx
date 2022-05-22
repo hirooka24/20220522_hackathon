@@ -42,7 +42,7 @@ const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
           <div>
             <ul className='mx-auto grid w-96 justify-center text-left'>
               {c.list.map((l, index) => (
-                <li key={index} className='my-4 font-bold tracking-wider'>
+                <li key={index} className='my-1 font-bold tracking-wider'>
                   {l}
                 </li>
               ))}
