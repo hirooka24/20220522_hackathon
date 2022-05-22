@@ -36,13 +36,15 @@ const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
             height={c.image.height}
           />
         </div>
-        <ul>
-          {c.list.map((l, index) => (
-            <li key={index} className='my-4 text-center font-bold tracking-wider'>
-              {l}
-            </li>
-          ))}
-        </ul>
+        <div>
+          <ul className='mx-auto grid w-96 justify-center text-left'>
+            {c.list.map((l, index) => (
+              <li key={index} className='my-4 font-bold tracking-wider'>
+                {l}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     ))}
   </div>
