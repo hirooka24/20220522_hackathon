@@ -25,7 +25,9 @@ const SolutionContainer: React.FC<SolutionProps> = ({ title, subtitle, card }) =
     <h2 className='text-center text-[20px] font-bold'>{title}</h2>
     {card.map((c, index) => (
       <div key={index} className=' text-center'>
-        <h3 className='my-8 text-[20px] font-bold'>{c.title}</h3>
+        <h3 className='my-8 inline-block rounded-3xl bg-yellow-800 py-1 px-5 text-[20px] font-bold'>
+          {c.title}
+        </h3>
         <div>
           <Image
             src={c.image.src}
@@ -52,9 +54,9 @@ export const Solution = () => {
     subtitle: 'Solution',
     card: [
       {
-        title: '贈り手',
+        title: 'おくり手',
         image: {
-          src: ReceiverImage,
+          src: SenderImage,
           alt: 'receiver',
           width: 208,
           height: 215,
@@ -62,9 +64,9 @@ export const Solution = () => {
         list: ['・自信を持って送れる', '・サイズや色がわかる'],
       },
       {
-        title: '贈り手',
+        title: 'もらい手',
         image: {
-          src: SenderImage,
+          src: ReceiverImage,
           alt: 'sender',
           width: 240,
           height: 203,

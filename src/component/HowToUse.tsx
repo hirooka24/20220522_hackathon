@@ -20,7 +20,7 @@ interface HowToUseCard {
 }
 
 const HowToUseContainer: React.FC<HowToUseProps> = ({ title, subtitle, card }) => (
-  <div className='px-5 text-center'>
+  <div className='bg-gray-50 p-5 text-center'>
     <div>
       <p className='text-sm font-bold'>{subtitle}</p>
       <h2 className='text-[20px] font-bold'>{title}</h2>
@@ -55,7 +55,7 @@ export const HowToUse = () => {
           width: 270,
           height: 238,
         },
-        text: 'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト',
+        text: 'プレゼントをもらう人が豊富なラインナップからほしい物リストを作成します。贈り手の人たちに欲しいものリストを共有して、同じものを選ぶことを防ぎます。',
       },
       {
         title: '贈る人はリストを確認するだけ',
@@ -65,7 +65,7 @@ export const HowToUse = () => {
           width: 270,
           height: 238,
         },
-        text: 'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト',
+        text: '共有されたほしい物リストを確認して、自分が送るプレゼントを選択します。あなたが送るプレゼントを選択したときは、リアルタイムで情報が反映されるので渡すプレゼントが一緒のことはないです。',
       },
     ],
   };
