@@ -22,8 +22,8 @@ interface SolutionCard {
 const SolutionContainer: React.FC<SolutionProps> = ({ title, subtitle, card }) => (
   <div className='py-12' id='solution'>
     <div className='my-4'>
-      <p className='text-center text-sm font-bold'>{subtitle}</p>
-      <h2 className='text-center text-[20px] font-bold'>{title}</h2>
+      <p className='text-center text-sm font-bold sm:text-lg'>{subtitle}</p>
+      <h2 className='text-center text-[20px] font-bold sm:text-2xl'>{title}</h2>
     </div>
     <div className='justify-center sm:flex'>
       {card.map((c, index) => (
@@ -39,9 +39,9 @@ const SolutionContainer: React.FC<SolutionProps> = ({ title, subtitle, card }) =
               height={c.image.height}
             />
           </div>
-          <ul className='mx-auto grid w-80 justify-center text-left '>
+          <ul className='mx-auto grid w-80 justify-center text-left sm:w-[450px] '>
             {c.list.map((l, index) => (
-              <li key={index} className='my-4 font-bold  tracking-wider'>
+              <li key={index} className='my-4 font-bold  tracking-wider sm:text-lg'>
                 {l}
               </li>
             ))}

@@ -22,8 +22,8 @@ interface TaskCard {
 const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
   <div className='bg-[#F9F9F9] py-12' id='task'>
     <div className='my-4'>
-      <p className='text-center text-sm font-bold'>{subtitle}</p>
-      <h2 className='text-center text-[20px] font-bold'>{title}</h2>
+      <p className='sm: text-center text-sm font-bold sm:text-lg'>{subtitle}</p>
+      <h2 className='text-center text-[20px] font-bold sm:text-2xl'>{title}</h2>
     </div>
     <div className='justify-center sm:flex'>
       {card.map((c, index) => (
@@ -40,9 +40,9 @@ const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
             />
           </div>
           <div>
-            <ul className='mx-auto grid w-96 justify-center text-left'>
+            <ul className='mx-auto grid w-96 justify-center text-left sm:w-[400px]'>
               {c.list.map((l, index) => (
-                <li key={index} className='my-1 font-bold tracking-wider'>
+                <li key={index} className='my-1 font-bold tracking-wider sm:text-lg'>
                   {l}
                 </li>
               ))}

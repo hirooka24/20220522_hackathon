@@ -22,8 +22,8 @@ interface HowToUseCard {
 const HowToUseContainer: React.FC<HowToUseProps> = ({ title, subtitle, card }) => (
   <div id='howtouse' className='bg-gray-50 p-5 text-center'>
     <div>
-      <p className='text-sm font-bold'>{subtitle}</p>
-      <h2 className='text-[20px] font-bold'>{title}</h2>
+      <p className='text-sm font-bold sm:text-lg'>{subtitle}</p>
+      <h2 className='text-[20px] font-bold sm:text-2xl'>{title}</h2>
     </div>
     <div className='sm:flex sm:justify-center'>
       {card.map((c, index) => (
@@ -37,7 +37,7 @@ const HowToUseContainer: React.FC<HowToUseProps> = ({ title, subtitle, card }) =
               height={c.image.height}
             />
           </div>
-          <p className='px-8 text-left leading-7'>{c.text}</p>
+          <p className='px-8 text-left leading-7 tracking-wider'>{c.text}</p>
         </div>
       ))}
     </div>
