@@ -4,9 +4,15 @@ export const PageFooter: React.FC = () => (
       <div className='pb-2'>
         <p className='text-lg'>About</p>
         <div className='flex'>
-          <p className='hover:cursor-pointer hover:opacity-70'>課題</p>
-          <p className='ml-4 hover:cursor-pointer hover:opacity-70'>解決策</p>
-          <p className='ml-4 hover:cursor-pointer hover:opacity-70'>利用方法</p>
+          <a className='scroll-smooth hover:cursor-pointer hover:opacity-70' href='#task'>
+            Task
+          </a>
+          <a className='ml-4 scroll-smooth hover:cursor-pointer hover:opacity-70' href='#solution'>
+            Solution
+          </a>
+          <a className='ml-4 scroll-smooth hover:cursor-pointer hover:opacity-70' href='#howtouse'>
+            How to use
+          </a>
         </div>
       </div>
       <div className='pb-2'>
