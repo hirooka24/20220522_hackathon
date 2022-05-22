@@ -19,7 +19,7 @@ interface SolutionCard {
 }
 
 const SolutionContainer: React.FC<SolutionProps> = ({ title, card }) => (
-  <div className='py-12'>
+  <div className='py-12' id='solution'>
     <h2 className='text-center text-base font-bold'>{title}</h2>
     {card.map((c, index) => (
       <div key={index} className=' text-center'>
