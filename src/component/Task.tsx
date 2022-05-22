@@ -21,32 +21,36 @@ interface TaskCard {
 
 const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
   <div className='bg-[#F9F9F9] py-12' id='task'>
-    <p className='text-center text-sm font-bold'>{subtitle}</p>
-    <h2 className='text-center text-[20px] font-bold'>{title}</h2>
-    {card.map((c, index) => (
-      <div key={index} className=' text-center'>
-        <h3 className='my-8 inline-block rounded-3xl bg-yellow-800 py-1 px-5 text-[20px] font-bold'>
-          {c.title}
-        </h3>
-        <div>
-          <Image
-            src={c.image.src}
-            alt={c.image.alt}
-            width={c.image.width}
-            height={c.image.height}
-          />
+    <div className='my-4'>
+      <p className='text-center text-sm font-bold'>{subtitle}</p>
+      <h2 className='text-center text-[20px] font-bold'>{title}</h2>
+    </div>
+    <div className='justify-center sm:flex'>
+      {card.map((c, index) => (
+        <div key={index} className=' text-center'>
+          <h3 className='my-8 inline-block rounded-3xl bg-yellow-800 py-1 px-5 text-[20px] font-bold'>
+            {c.title}
+          </h3>
+          <div>
+            <Image
+              src={c.image.src}
+              alt={c.image.alt}
+              width={c.image.width}
+              height={c.image.height}
+            />
+          </div>
+          <div>
+            <ul className='mx-auto grid w-96 justify-center text-left'>
+              {c.list.map((l, index) => (
+                <li key={index} className='my-4 font-bold tracking-wider'>
+                  {l}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div>
-          <ul className='mx-auto grid w-96 justify-center text-left'>
-            {c.list.map((l, index) => (
-              <li key={index} className='my-4 font-bold tracking-wider'>
-                {l}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
 );
 

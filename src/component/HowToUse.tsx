@@ -25,20 +25,22 @@ const HowToUseContainer: React.FC<HowToUseProps> = ({ title, subtitle, card }) =
       <p className='text-sm font-bold'>{subtitle}</p>
       <h2 className='text-[20px] font-bold'>{title}</h2>
     </div>
-    {card.map((c, index) => (
-      <div key={index} className='my-8'>
-        <h3 className='text-[20px] font-bold'>{c.title}</h3>
-        <div className='my-4'>
-          <Image
-            src={c.image.src}
-            alt={c.image.alt}
-            width={c.image.width}
-            height={c.image.height}
-          />
+    <div className='sm:flex sm:justify-center'>
+      {card.map((c, index) => (
+        <div key={index} className='my-8 sm:w-1/2'>
+          <h3 className='text-[20px] font-bold'>{c.title}</h3>
+          <div className='my-4'>
+            <Image
+              src={c.image.src}
+              alt={c.image.alt}
+              width={c.image.width}
+              height={c.image.height}
+            />
+          </div>
+          <p className='text-left leading-7 sm:px-8'>{c.text}</p>
         </div>
-        <p className='text-left  leading-7'>{c.text}</p>
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
 );
 
