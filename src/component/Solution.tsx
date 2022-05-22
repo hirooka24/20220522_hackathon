@@ -4,6 +4,7 @@ import SenderImage from '~/img/solution-sender.png';
 
 interface SolutionProps {
   title: string;
+  subtitle: string;
   card: SolutionCard[];
 }
 
@@ -18,12 +19,13 @@ interface SolutionCard {
   list: string[];
 }
 
-const SolutionContainer: React.FC<SolutionProps> = ({ title, card }) => (
+const SolutionContainer: React.FC<SolutionProps> = ({ title, subtitle, card }) => (
   <div className='py-12' id='solution'>
-    <h2 className='text-center text-base font-bold'>{title}</h2>
+    <p className='text-center text-sm font-bold'>{subtitle}</p>
+    <h2 className='text-center text-[20px] font-bold'>{title}</h2>
     {card.map((c, index) => (
       <div key={index} className=' text-center'>
-        <h3 className='my-8 text-lg font-bold'>{c.title}</h3>
+        <h3 className='my-8 text-[20px] font-bold'>{c.title}</h3>
         <div>
           <Image
             src={c.image.src}
@@ -46,7 +48,8 @@ const SolutionContainer: React.FC<SolutionProps> = ({ title, card }) => (
 
 export const Solution = () => {
   const Data: SolutionProps = {
-    title: '貰い手の欲しいものリストを共有',
+    title: 'ー 貰い手の欲しいものリストを共有 ー',
+    subtitle: 'Solution',
     card: [
       {
         title: '贈り手',
