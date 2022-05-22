@@ -27,7 +27,7 @@ const HowToUseContainer: React.FC<HowToUseProps> = ({ title, subtitle, card }) =
     </div>
     <div className='sm:flex sm:justify-center'>
       {card.map((c, index) => (
-        <div key={index} className='my-8 sm:w-1/2'>
+        <div key={index} className='my-8 sm:w-[400px]'>
           <h3 className='text-[20px] font-bold'>{c.title}</h3>
           <div className='my-4'>
             <Image
@@ -37,7 +37,7 @@ const HowToUseContainer: React.FC<HowToUseProps> = ({ title, subtitle, card }) =
               height={c.image.height}
             />
           </div>
-          <p className='text-left leading-7 sm:px-8'>{c.text}</p>
+          <p className='px-8 text-left leading-7'>{c.text}</p>
         </div>
       ))}
     </div>
