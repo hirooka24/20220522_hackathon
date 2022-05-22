@@ -54,7 +54,7 @@ export const Solution = () => {
     subtitle: 'Solution',
     card: [
       {
-        title: 'おくり手',
+        title: '贈るひと',
         image: {
           src: SenderImage,
           alt: 'receiver',
@@ -64,7 +64,7 @@ export const Solution = () => {
         list: ['・自信を持って送れる', '・サイズや色がわかる'],
       },
       {
-        title: 'もらい手',
+        title: 'もらうひと',
         image: {
           src: ReceiverImage,
           alt: 'sender',
