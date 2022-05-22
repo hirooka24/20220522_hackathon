@@ -4,6 +4,7 @@ import TaskSenderImage from '~/img/task-sender.png';
 
 interface TaskProps {
   title: string;
+  subtitle: string;
   card: TaskCard[];
 }
 
@@ -18,9 +19,10 @@ interface TaskCard {
   list: string[];
 }
 
-const TaskContainer: React.FC<TaskProps> = ({ title, card }) => (
+const TaskContainer: React.FC<TaskProps> = ({ title, subtitle, card }) => (
   <div className='py-12' id='task'>
-    <h2 className='text-center text-base font-bold'>{title}</h2>
+    <p className='text-center text-sm font-bold'>{subtitle}</p>
+    <h2 className='text-center text-[20px] font-bold'>{title}</h2>
     {card.map((c, index) => (
       <div key={index} className=' text-center'>
         <h3 className='my-8 text-lg font-bold'>{c.title}</h3>
@@ -32,9 +34,9 @@ const TaskContainer: React.FC<TaskProps> = ({ title, card }) => (
             height={c.image.height}
           />
         </div>
-        <ul className='grid grid-cols-1 '>
+        <ul className='content-center'>
           {c.list.map((l, index) => (
-            <li key={index} className='my-4 font-bold  tracking-wider'>
+            <li key={index} className='my-4 text-left font-bold tracking-wider'>
               {l}
             </li>
           ))}
@@ -46,25 +48,26 @@ const TaskContainer: React.FC<TaskProps> = ({ title, card }) => (
 
 export const Task = () => {
   const Data: TaskProps = {
-    title: '贈り物のミスマッチをなくす',
+    subtitle: 'Task',
+    title: 'ー 贈り物のミスマッチをなくす ー',
     card: [
       {
         title: '贈り手',
         image: {
-          src: TaskReceiverImage,
+          src: TaskSenderImage,
           alt: 'receiver',
-          width: 208,
-          height: 215,
+          width: 126,
+          height: 210,
         },
         list: ['・何が欲しいのかわからない', '・使ってもらえるか不安', '・サイズがわからない'],
       },
       {
         title: '贈り手',
         image: {
-          src: TaskSenderImage,
+          src: TaskReceiverImage,
           alt: 'sender',
-          width: 240,
-          height: 203,
+          width: 168,
+          height: 212,
         },
         list: ['・既に持っている', '・趣味ではないため活用しない', '・同じ贈り物をもらう'],
       },
